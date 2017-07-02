@@ -10,6 +10,18 @@
 	<th>
 		Task details 
 	</th>
+	<th>
+		Task created at  
+	</th>
+	<th>
+		Task updated at
+	</th>
+	<th>
+		action 
+	</th>
+	<th>
+		action
+	</th>
 
 </tr>
 	
@@ -32,20 +44,34 @@
 		{{$value->task_detail}}
 	</td>
 
+
+     
+	<td>
+		
+		{{$value->created_at}}
+	</td>
+
+	<td>
+		
+		{{$value->updated_at}}
+	</td>
+
+	<td>
+	<a href = 'edit/{{ $value->id }}'><button> Edit</button></a>
+	</td>
+
+	<td>
+	<a href = 'delete/{{ $value->id }}'><button>delete</button></a>
+	</td>
+
 </tr>
 
-<tr>
-	
-	<td><a href = 'edit/{{ $value->id }}'><button> Edit</button></a></td>
-	<td><a href = 'delete/{{ $value->id }}'><button>delete</button></a></td>
 
-</tr>
-
-<tr>
 	
 	
 
-</tr>
+
+
 
 
 @endforeach
